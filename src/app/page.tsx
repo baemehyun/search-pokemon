@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import {
   ApolloClient,
-  createHttpLink,
   InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
@@ -12,13 +11,9 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import PokemonResult from "./component/pokemon-result";
 
-export const link = createHttpLink({
-  uri: "https://graphql-pokemon2.vercel.app",
-});
-
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link,
+  uri: "https://graphql-pokemon2.vercel.app",
 });
 
 export default function App() {
