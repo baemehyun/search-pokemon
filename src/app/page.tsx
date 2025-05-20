@@ -11,7 +11,7 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import PokemonResult from "./component/pokemon-result";
 
-export const client = new ApolloClient({
+const client = new ApolloClient({
   cache: new InMemoryCache(),
   uri: "https://graphql-pokemon2.vercel.app",
 });
