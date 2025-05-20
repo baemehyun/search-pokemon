@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import { Card, List } from "antd";
+import { Pokemon } from "../types/pokemon";
 const GET_POKEMON = gql(/* GraphQL */ `
   query pokemons($first: Int!) {
     pokemons(first: $first) {
@@ -37,7 +38,7 @@ export function PokemonList() {
     <List
       grid={{ gutter: 18, column: 3 }}
       dataSource={data.pokemons}
-      renderItem={(pokemon: any) => (
+      renderItem={(pokemon: Pokemon) => (
         <List.Item>
           <Card
             title={pokemon.name}

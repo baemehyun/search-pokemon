@@ -5,7 +5,6 @@ import {
   createHttpLink,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
 } from "@apollo/client";
 import { PokemonList } from "./component/pokemon-list";
 import SearchInput from "./component/search";

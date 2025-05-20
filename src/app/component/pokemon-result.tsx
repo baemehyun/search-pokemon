@@ -6,7 +6,6 @@ import { GET_POKEMON } from "../query";
 import { Pokemon } from "../types/pokemon";
 import { useMemo } from "react";
 import { Card } from "antd";
-import TabPane from "antd/es/tabs/TabPane";
 import PokemonAttacks from "./pokemon-attacks";
 import PokemonEvolutions from "./pokemon-evolutions";
 interface PokemonResultProps {
@@ -34,10 +33,6 @@ export default function PokemonResult({ name }: PokemonResultProps) {
       </Card>
     );
   }
-  const gridStyle: React.CSSProperties = {
-    width: "50%",
-    textAlign: "center",
-  };
 
   const handleEvolutionClick = (evolutionName: string) => {
     router.push(`/?name=${evolutionName.toLowerCase()}`);
