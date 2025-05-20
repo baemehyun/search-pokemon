@@ -21,7 +21,7 @@ export default function PokemonAttacks({ attacks }: PokemonAttacksProps) {
           <Row gutter={[16, 16]}>
             {attacks.fast.map((attack) => (
               <Col xs={24} md={12} key={attack.name}>
-                <Card title={attack.name} bordered>
+                <Card title={attack.name}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <Tag color="blue" className={`type-${attack.type.toLowerCase()}`}>
                       {attack.type}
@@ -43,7 +43,7 @@ export default function PokemonAttacks({ attacks }: PokemonAttacksProps) {
           <Row gutter={[16, 16]}>
             {attacks.special.map((attack) => (
               <Col xs={24} md={12} key={attack.name}>
-                <Card title={attack.name} bordered>
+                <Card title={attack.name}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                     <Tag color="volcano" className={`type-${attack.type.toLowerCase()}`}>
                       {attack.type}
